@@ -24,4 +24,5 @@ O Organizador (Python): Ele pega essas informações "pescadas" e as organiza de
 
 # Como utilizar ?
 No terminal digite "pip install -r requirements.txt".
+
 Após isso  digitar "python Consultor.py"

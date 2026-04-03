@@ -11,8 +11,9 @@ A Solução: Uma ferramenta onde você apenas digita o nome do livro e recebe, i
 
 A nota oficial (reputação do livro).
 
-As 10 opiniões mais recentes de quem já leu.
+A opinião mais recentes de quem já leu.
 
+A sinopse do livro 
 # Como a "mágica" acontece?
 O programa funciona através de três pilares:
 

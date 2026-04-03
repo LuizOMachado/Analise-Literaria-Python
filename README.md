@@ -1,6 +1,5 @@
 ## Projeto: Consultor Literário (Web Scraping Skoob)
 
-Este projeto foi proposto  pelo professor da disciplina de **Linguagem de Programação II**, do curso de IA da **Fatec Rio Claro**.
 
 # O que é o projeto?
 Sabe quando você ouve falar de um livro e quer saber rápido se ele vale o seu tempo? Normalmente, você teria que abrir o navegador, digitar o site do Skoob, pesquisar o título, clicar no livro certo e rolar várias páginas para ler o que as pessoas acharam.

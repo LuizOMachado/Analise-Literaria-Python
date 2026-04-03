@@ -22,13 +22,6 @@ O Tradutor Inteligente (BeautifulSoup): O site original é uma bagunça de códi
 
 O Organizador (Python): Ele pega essas informações "pescadas" e as organiza de um jeito bonito e fácil de ler na tela do seu computador.
 
-# As Etapas de Construção
-Estou construindo esse projeto em passos lógicos para garantir que ele seja robusto:
-
-Fase 1 (O Mapa): Ensinar o programa a transformar o nome do livro em um endereço de internet válido.
-
-Fase 2 (A Busca): Fazer o "robô" entrar no site e identificar qual é o livro exato entre vários resultados.
-
-Fase 3 (A Coleta): O trabalho pesado de ler as notas e copiar os comentários de forma automática.
-
-Fase 4 (O Acabamento): Deixar o programa "inteligente" para que, se você digitar um nome errado, ele te avise educadamente em vez de simplesmente parar de funcionar.
+# Como utilizar ?
+No terminal digite "pip install -r requirements.txt".
+Após isso  digitar "python Consultor.py"

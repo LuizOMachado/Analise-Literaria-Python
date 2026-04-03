@@ -1,5 +1,5 @@
 curl_cffi
 beautifulsoup4
-duckduckgo_search
+ddgs
 rich
 lxml

@@ -32,5 +32,7 @@
 ​No terminal, instale as bibliotecas necessárias:
 
 pip install -r requirements.txt
+
 ​Inicie a consulta: 
+
 python Consultor.py

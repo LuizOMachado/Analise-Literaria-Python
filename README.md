@@ -11,15 +11,13 @@ A Solução: Uma ferramenta onde você apenas digita o nome do livro e recebe, i
 
 A nota oficial (reputação do livro).
 
-A opinião mais recentes de quem já leu.
-
 A sinopse do livro 
 # Como a "mágica" acontece?
 O programa funciona através de três pilares:
 
 O Mensageiro (Requests): O programa age como um "usuário fantasma". Ele vai até o site do Skoob de forma invisível, sem precisar abrir uma janela de navegador pesada, e pede as informações da página.
 
-O Tradutor Inteligente (BeautifulSoup): O site original é uma bagunça de códigos e anúncios. O programa funciona como um filtro que ignora o lixo visual e "pesca" apenas o que interessa: o título, a nota e o texto das resenhas.
+O Tradutor Inteligente (BeautifulSoup): O site original é uma bagunça de códigos e anúncios. O programa funciona como um filtro que ignora o lixo visual e "pesca" apenas o que interessa: o título, a nota e a sinopse.
 
 O Organizador (Python): Ele pega essas informações "pescadas" e as organiza de um jeito bonito e fácil de ler na tela do seu computador.
 

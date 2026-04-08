@@ -53,20 +53,21 @@ class ConsultorLiterario:
             res_main = self.session.get(url_principal, headers=self.headers, timeout=15)
             soup_main = BeautifulSoup(res_main.text, 'lxml')
             
-            titulo_elem = soup_main.find('h1')
-            titulo = titulo_elem.get_text(strip=True) if titulo_elem else "Título não identificado"
+           
+            titulo_elem = soup_main.select_one('h1.font-lato.text-lg.font-bold')
+            titulo = titulo_elem.get_text(strip=True) if titulo_elem else "Não encontrado"
             
-            autor = "Autor desconhecido"
-            if titulo_elem:
-                autor_elem = titulo_elem.find_next('a')
-                if autor_elem:
-                    autor = autor_elem.get_text(strip=True)
+           
+            autor_elem = soup_main.find('a', href=re.compile(r'/author/'))
+            autor = autor_elem.get_text(strip=True) if autor_elem else "Não encontrado"
 
-            nota_elem = soup_main.find('span', class_='bg-success')
-            nota = nota_elem.get_text(strip=True) if nota_elem else "N/A"
+           
+            nota_elem = soup_main.select_one('span.bg-success[class*="text-[24px]"]')
+            nota = nota_elem.get_text(strip=True) if nota_elem else "Não encontrado"
             
-            sinopse_elem = soup_main.find('p', class_='text-contrast')
-            sinopse = sinopse_elem.get_text(strip=True) if sinopse_elem else "Sinopse não encontrada."
+            
+            sinopse_elem = soup_main.select_one('p.text-contrast.font-lato')
+            sinopse = sinopse_elem.get_text(strip=True) if sinopse_elem else "Não encontrado"
 
             return {
                 "titulo": titulo,
@@ -79,25 +80,19 @@ class ConsultorLiterario:
             return None
 
     def formatar_saida(self, dados):
-        
         console.print() 
-        
         
         console.print(Rule("[bold green]LIVRO ENCONTRADO[/bold green]", style="bright_magenta"))
         console.print() 
         
-       
         console.print(Align.center(f"[bold cyan]{dados['titulo']}[/bold cyan]"))
-        
         
         console.print(Align.center(f"[italic white]{dados['autor']}[/italic white]"))
         console.print() 
         
-        
         console.print(Align.center(f"[bold white]Avaliação Geral:[/bold white] [bold yellow]⭐ {dados['nota']}[/bold yellow]"))
         console.print()
         
-       
         console.print(Align.center("[bold cyan]SINOPSE[/bold cyan]"))
         console.print(Panel(f"[italic white]{dados['sinopse']}[/italic white]", border_style="cyan", padding=(1, 2)))
         
